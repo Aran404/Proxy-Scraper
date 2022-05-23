@@ -41,7 +41,7 @@ const getProxies = async (proxyType) => {
                     method: "GET"
                 });
                 let proxies = await response.text();
-                await fs.appendFile('httpProxies.txt', proxies);
+                await fs.appendFile('httpProxies.txt', proxies + '\n');
             }
             console.log("Successfully added proxies to httpProxies.txt");
             break;
@@ -57,7 +57,7 @@ const getProxies = async (proxyType) => {
                     method: "GET"
                 });
                 let proxies = await response.text();
-                await fs.appendFile('socks4Proxies.txt', proxies);
+                await fs.appendFile('socks4Proxies.txt', proxies + '\n');
             }
             console.log("Successfully added proxies to socks4Proxies.txt");
             break;
@@ -73,7 +73,7 @@ const getProxies = async (proxyType) => {
                     method: "GET"
                 });
                 let proxies = await response.text();
-                await fs.appendFile('socks5Proxies.txt', proxies);
+                await fs.appendFile('socks5Proxies.txt', proxies + '\n');
             }
             console.log("Successfully added proxies to socks5Proxies.txt");
             break;
